@@ -55,7 +55,7 @@ public static class CursorMover
         }
     }
 
-    private static IEnumerable<Movement> GenerateMovements(Point start, Point end, int milliseconds)
+    public static IEnumerable<Movement> GenerateMovements(Point start, Point end, int milliseconds)
     {
         IEnumerable<int> FisherYatesShuffle(IList<int> collection, int elements)
         {
@@ -136,8 +136,8 @@ public static class CursorMover
 
         Point GenerateControlPoint()
         {
-            var x = start.X + arcMultiplier * (Math.Abs(end.X - start.X) + 50) * 0.01 * Random.Shared.Next(15, 30);
-            var y = start.Y + arcMultiplier * (Math.Abs(end.Y - start.Y) + 50) * 0.01 * Random.Shared.Next(15, 30);
+            var x = start.X + arcMultiplier * (Math.Abs(end.X - start.X) + 50) * 0.01 * Random.Shared.Next(5, 10);
+            var y = start.Y + arcMultiplier * (Math.Abs(end.Y - start.Y) + 50) * 0.01 * Random.Shared.Next(5, 10);
 
             return new Point((int) x, (int) y);
         }
