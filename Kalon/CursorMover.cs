@@ -55,7 +55,7 @@ public static class CursorMover
         }
     }
 
-    public static IEnumerable<Movement> GenerateMovements(Point start, Point end, int milliseconds)
+    private static IEnumerable<Movement> GenerateMovements(Point start, Point end, int milliseconds)
     {
         IEnumerable<int> FisherYatesShuffle(IList<int> collection, int elements)
         {
